@@ -1,0 +1,1 @@
+Just execute delete-acl.sh

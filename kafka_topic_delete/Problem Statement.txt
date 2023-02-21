@@ -1,0 +1,40 @@
+1. Given file with kafka topic kafkaunusedtopic.txt
+2. command
+    confluent kafka topic delete <topic name> --environment <environment id> --cluster <cluster id>
+
+3. Given service account file & topic file
+   confluent kafka acl delete --allow/deny --operation <READ/WRITE/DESCRIBE> --topic <topic name> --service-account <service account> sa-23334 sa-5t545 sa-r3r3
+
+
+
+abc
+bcf
+afr
+enirfr
+aefroir
+rornjkgrn
+
+confluent kafka topic list > kafkaunusedtopic.txt
+
+confluent kafka acl --operation list --topic <topic name>
+
+READ
+WRITE
+DESCRIBE   I want to get the operations / acl for each topic
+
+confluent kafka acl delete --allow --operation <READ/WRITE/DESCRIBE> --topic <topic name> --service-account <service account> sa-23334 sa-5t545 sa-r3r3
+
+conflent kafka topic list | grep abc
+
+======================================================================================
+confluent kafka topic list > kafkaunusedtopic.txt --> topic name
+
+confluent kafka acl list --topic $topicname
+
+Principal | Permission | Operation | ResourceType | ResourceName | Patterntype 
+User: sa-123 | ALLOW | WRITE | TOPIC | abc | LITERAL 
+User: sa-123 | ALLOW | READ | TOPIC | abc | LITERAL 
+User: sa-123 | ALLOW | DESCRIBE | TOPIC | abc | LITERAL 
+========================================================================================
+
+confluent kafka acl delete --allow/--deny --operation <READ/WRITE/DESCRIBE> --topic <topic name> --service-account <service account> 

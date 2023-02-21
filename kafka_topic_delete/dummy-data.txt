@@ -1,0 +1,5 @@
+Principal   | Permission | Operation | ResourceType | ResourceName | PatternType 
+------------+------------+-----------+--------------+--------------+------------
+User:sa-123 | ALLOW   	 | WRITE     | TOPIC        | abc          | LITERAL 
+User:sa-123 | ALLOW      | READ      | TOPIC        | abc          | LITERAL 
+User:sa-123 | ALLOW      | DESCRIBE  | TOPIC        | abc          | LITERAL
