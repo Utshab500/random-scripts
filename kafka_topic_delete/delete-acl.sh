@@ -30,7 +30,7 @@ executeConfluent() {
 	while [[ i -le $limit ]]
 	do
 		cmd="getAcl $1 | tail -n -$(( line - 2 )) | awk 'NR==$i'"
-		sa=$(eval $cmd | awk -F "|" '{print $1}' | sed s'/ //g')
+		sa=$(eval $cmd | awk -F "|" '{print $1}' | awk -F ":" '{print $2}' | sed s'/ //g')
 		acl=$(eval $cmd | awk -F "|" '{print tolower($2)}' | sed s'/ //g')
 		opp=$(eval $cmd | awk -F "|" '{print $3}' | sed s'/ //g')
 
